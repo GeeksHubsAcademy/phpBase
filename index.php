@@ -8,8 +8,8 @@
 
 require "vendor/autoload.php";
 
-use App\Core\Config\configDB;
-use App\Core\Helpers\Connection;
+use App\Core\BootStrap;
 
-$config = configDB::getConfig();
-Connection::make($config['database']);
+BootStrap::init();
+
+
